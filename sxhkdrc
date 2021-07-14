@@ -139,5 +139,9 @@ alt + super + {Left,Down,Up,Right}
 super + shift + g
 	google-chrome
 #Screenshot to avoid overwriting them
-shift + Print
-	import -window root screenshot.jpg  
+Print
+    maim /home/meretec/Desktop/$(date +%Y-%m-%d_%H-%m-%s).jpg
+
+super + Print
+    maim -s /home/meretec/Desktop/$(date +%Y-%m-%d_%H-%m-%s).jpg
+
