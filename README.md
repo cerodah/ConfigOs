@@ -18,3 +18,13 @@ In the bottom left. There is the symbolic hackthebox icon. It is configured so t
 We can also see that it shows the ip of the "eth0" interface. You can change this manually in the file "/home/$USER/.config/bin/ethernet_status.sh"
 
 ![2021-07-14_15-07-1626268220](https://user-images.githubusercontent.com/82907557/125627698-7131ae20-5b99-4605-acb1-2600e53fe76c.jpg)
+
+As an extra I have added a module in which it consists of typing the IP of the machine and it prints it in the module
+
+No IP displayed
+
+![2021-07-31_17-07-1627745601](https://user-images.githubusercontent.com/82907557/127744909-77ddaa0b-f817-41a0-aaa5-6cda8a53868a.jpg)
+
+IP displayed
+![2021-07-31_17-07-1627745628](https://user-images.githubusercontent.com/82907557/127744924-1a4b0d37-5b07-4e3d-9a43-d313659573df.jpg)
+
