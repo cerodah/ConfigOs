@@ -1,4 +1,20 @@
 # ConfigOs
+Distribution: [Parrot OS](https://www.parrotsec.org/).
+
+Hotkey Daemon: [Sxhkd](https://wiki.archlinux.org/title/Sxhkd_(Espa%C3%B1ol)) (Spanish).
+
+Window Manager: [BSPWM](https://github.com/baskerville/bspwm).
+
+Shell: [zsh](https://ohmyz.sh/).
+
+Terminal: [xterm] (https://github.com/xtermjs/xterm.js).
+
+Editor: [Nano](https://www.nano-editor.org/) and [emacs](https://www.gnu.org/software/emacs/).
+
+File Manager: [Caja](https://github.com/mate-desktop/caja)
+
+Browser: [Google-Chrome] (https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)
+
 My bspwm window manager configuration is designed to make ctf's faster, more comfortable and with functions performed in ctf's (based on s4vitar settings)
 The functions can be seen in the shell configuration file ".zshrc".
 
