@@ -13,7 +13,7 @@ Editor: [Nano](https://www.nano-editor.org/) and [emacs](https://www.gnu.org/sof
 
 File Manager: [Caja](https://github.com/mate-desktop/caja)
 
-Browser: [Google-Chrome] (https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)
+Browser: Google-Chrome
 
 My bspwm window manager configuration is designed to make ctf's faster, more comfortable and with functions performed in ctf's (based on s4vitar settings)
 The functions can be seen in the shell configuration file ".zshrc".
