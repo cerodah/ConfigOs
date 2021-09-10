@@ -1,4 +1,4 @@
-# ConfigOs
+# DotFiles
 Distribution: [Parrot OS](https://www.parrotsec.org/).
 
 Hotkey Daemon: [Sxhkd](https://wiki.archlinux.org/title/Sxhkd_(Espa%C3%B1ol)) (Spanish).
