@@ -7,7 +7,7 @@ Window Manager: [BSPWM](https://github.com/baskerville/bspwm).
 
 Shell: [zsh](https://ohmyz.sh/).
 
-Terminal: [xterm] (https://github.com/xtermjs/xterm.js).
+Terminal: [xterm](https://github.com/xtermjs/xterm.js).
 
 Editor: [Nano](https://www.nano-editor.org/) and [emacs](https://www.gnu.org/software/emacs/).
 
