@@ -7,13 +7,13 @@ Window Manager: [BSPWM](https://github.com/baskerville/bspwm).
 
 Shell: [zsh](https://ohmyz.sh/).
 
-Terminal: [xterm](https://github.com/xtermjs/xterm.js).
+Terminal: [kitty](https://sw.kovidgoyal.net/kitty/).
 
 Editor: [Nano](https://www.nano-editor.org/) and [emacs](https://www.gnu.org/software/emacs/).
 
 File Manager: [Caja](https://github.com/mate-desktop/caja)
 
-Browser: Google-Chrome
+Browser: Firefox with firejail
 
 My bspwm window manager configuration is designed to make ctf's faster, more comfortable and with functions performed in ctf's (based on s4vitar settings)
 The functions can be seen in the shell configuration file ".zshrc".
