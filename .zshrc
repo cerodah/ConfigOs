@@ -222,5 +222,6 @@ rmk() {
         password=$(openssl rand -base64 512 | sha256sum | base64)
 	openssl enc -aes-256-cbc -salt -in "$file" -pass pass:$password -pbkdf2 -out "${file}_enc" && mv "${file}_enc" "$file"
         scrub -p dod "$file" && shred -zun 10 -v "$file"
+	unset password
     done
 }
