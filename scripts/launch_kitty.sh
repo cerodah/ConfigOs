@@ -3,7 +3,7 @@
 # Abre kitty
 /usr/bin/kitty &
 
-# Espera un segundo para asegurar que kitty esté completamente cargado
+# Espera un segundo para asegurar que kitty estecompletamente cargado
 sleep 0.5
 
 # Envía la combinación de teclas "Ctrl" + "Shift" + "+" dos veces
