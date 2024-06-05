@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	gnome-terminal
+	/home/meretec/.config/sxhkd/scripts/launch_kitty.sh
 
 # program launcher
 super + d
-	rofi -show run
+	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/shapes/scripts/rofi/launcher.rasi
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -34,9 +34,9 @@ super + m
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest node
+# swap the current node and the biggest window
 super + g
-	bspc node -s biggest
+	bspc node -s biggest.window
 
 #
 # state/flags
@@ -55,20 +55,16 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-#super + {_,shift + }{h,j,k,l}
-#	bspc node -{f,s} {west,south,north,east}
-
 super + {_,shift + }{Left,Down,Up,Right}
-       bspc node -{f,s} {west,south,north,east}
-
+	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous node in the current desktop
+# focus the next/previous window in the current desktop
 super + {_,shift + }c
-	bspc node -f {next,prev}.local
+	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -96,17 +92,16 @@ super + {_,shift + }{1-9,0}
 super + ctrl + alt + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
-
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + space
+super + ctrl + alt + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + alt + space
+super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
@@ -125,23 +120,47 @@ super + ctrl + alt + space
 super + ctrl + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# Custom move/resize
-alt + super + {Left,Down,Up,Right}
-	/home/meretec/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
-
-
-# ---------------------------------------------
 # CUSTOM
-# ---------------------------------------------
+alt + super + {Left,Down,Up,Right}
+	~/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
 
-# Google-Chrome
+# Open Firefox
+# --seccomp le indica a firejail que bloquee y filtre cualquiera de las llamadas al sistema.
+# --private lo hace como si fuera una ventana privada de un navegador web. Sandox temporal el cual se borra después de cerrar la aplicación.
+super + shift + g     
+        /usr/bin/firejail --seccomp /usr/bin/firefox
 
-super + shift + g
-	google-chrome
-#Screenshot to avoid overwriting them
-Print
-    maim /home/meretec/Desktop/$(date +%Y-%m-%d_%H-%m-%s).jpg
+# Open tor browser
+super + alt + t
+	cd ~/Desktop/tor-browser && ./start-tor-browser.desktop
 
-super + Print
-    maim -s /home/meretec/Desktop/$(date +%Y-%m-%d_%H-%m-%s).jpg
+# Open Burpsuite
+super + shift + b
+	/usr/bin/burpsuite
 
+# Screen Lock
+ctrl + alt + l
+	/usr/bin/i3lock-fancy	
+
+# Increase volume
+ctrl + shift + Up
+	pamixer --increase 5
+
+# Decrease the volume
+ctrl + shift + Down 
+	pamixer --decrease 5
+
+# Mute/Restore volume
+ctrl + shift + m
+	pamixer --toggle-mute
+
+# ScreenShots
+@Print
+	flameshot full
+
+ctrl + @Print
+	flameshot gui
+
+# Screen Recording
+ctrl + '
+	/home/meretec/.config/sxhkd/scripts/screen_recording.sh
